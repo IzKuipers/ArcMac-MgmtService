@@ -88,7 +88,7 @@ class ManagementServiceProcess extends BaseService {
   setVolume(volume) {
     this.Log("Volume to " + volume);
 
-    this.client.emit("sound-set-volume", volume);
+    this.client.emit("sound-volume-set", volume);
   }
 
   mute() {
