@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "name": "ArcMac Service",
+    "description": "Service for the ArcMac's system management protocol",
+    "author": "Izaak Kuipers",
+    "version": "1.0.0",
+    "installLocation": "U:/Applications/IzK_ArcMacService",
+    "appId": "IzK_ArcMacService"
+  },
+  "outFile": "IzK_ArcMacService.arc",
+  "payloadDir": "src",
+  "devPort": 3128,
+  "buildHash": "fd4371b9",
+  "noHotRelaunch": false,
+  "logLevel": "all"
+}
