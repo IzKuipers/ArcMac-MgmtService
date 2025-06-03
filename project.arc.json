@@ -3,7 +3,7 @@
     "name": "ArcMac Service",
     "description": "Service for the ArcMac's system management protocol",
     "author": "Izaak Kuipers",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "installLocation": "U:/Applications/IzK_ArcMacService",
     "appId": "IzK_ArcMacService"
   },

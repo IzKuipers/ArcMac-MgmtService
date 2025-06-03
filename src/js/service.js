@@ -45,10 +45,14 @@ class ManagementServiceProcess extends BaseService {
     this.client.on("exec-error", (fullName, e) => {
       daemon.sendNotification({
         title: "System management protocol",
-        message: `Failed to execute command '${fullName}': ${e}`,
+        message: `Failed to execute command '${fullName}': ${JSON.stringify(
+          e
+        )}`,
         timeout: 3000,
         image: icons.ErrorIcon,
       });
+
+      console.log(e);
     });
   }
 
@@ -91,6 +95,12 @@ class ManagementServiceProcess extends BaseService {
     this.Log("Volume mute");
 
     this.client.emit("sound-volume-mute");
+  }
+
+  sleep() {
+    this.Log("Sleep");
+
+    this.client.emit("power-suspend");
   }
 
   async stop() {
