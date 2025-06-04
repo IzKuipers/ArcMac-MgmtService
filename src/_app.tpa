@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "System Controls",
-    "version": "1.0.2",
+    "name": "System Management Protocol",
+    "version": "1.0.3",
     "author": "Izaak Kuipers",
     "icon": "@local:icon.png"
   },
@@ -34,8 +34,8 @@
     "maximize": false,
     "close": true
   },
-  "glass": true,
-  "hidden": false,
+  "glass": false,
+  "hidden": true,
   "core": false,
   "entrypoint": "main.js",
   "id": "IzK_ArcMacService"
