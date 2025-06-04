@@ -1,7 +1,7 @@
+if (!navigator.userAgent.toLowerCase().includes("electron")) return;
+
 const { ManagementService } = await load("js/service.js");
 await load("js/socket.io.js");
-
-if (!navigator.userAgent.toLowerCase().includes("electron")) return;
 
 await daemon.serviceHost.stopService("ArcMacMgmtSvc");
 daemon.serviceHost.Services.update((v) => {
