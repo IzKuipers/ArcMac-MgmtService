@@ -1,3 +1,4 @@
+// #unsafe
 class ManagementServiceProcess extends BaseService {
   status = Store({
     volume: 0,
@@ -36,6 +37,7 @@ class ManagementServiceProcess extends BaseService {
     this.client.on("sys-status", (status) => {
       this.Log("Got client status");
       this.status.set(status);
+      this.sourceUrl = JSON.stringify(status);
     });
 
     this.client.on("exec-success", (fullName, result) => {
@@ -43,13 +45,11 @@ class ManagementServiceProcess extends BaseService {
     });
 
     this.client.on("exec-error", (fullName, e) => {
-      daemon.sendNotification({
+      MessageBox({
         title: "System management protocol",
-        message: `Failed to execute command '${fullName}': ${JSON.stringify(
-          e
-        )}`,
-        timeout: 3000,
-        image: icons.ErrorIcon,
+        message: `Failed to execute command '${fullName}': ${e}`,
+        buttons: [{ caption: "Okay", action: () => {}, suggested: true }],
+        image: "ErrorIcon",
       });
 
       console.log(e);

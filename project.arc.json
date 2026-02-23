@@ -10,7 +10,7 @@
   "outFile": "IzK_ArcMacService.arc",
   "payloadDir": "src",
   "devPort": 3128,
-  "buildHash": "fd4371b9",
-  "noHotRelaunch": false,
+  "buildHash": "0a1a70d3",
+  "noHotRelaunch": true,
   "logLevel": "all"
 }
